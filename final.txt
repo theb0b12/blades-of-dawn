@@ -1,0 +1,101 @@
+TITLE:
+Logan Bordewin-Allen
+CSCI200 C
+Blades At Dawn
+
+PROBLEM DESCRIPTION:
+I made a 2D platformer game using SFML where the players must navigate through multiple levels of platforms, and obstacles.
+The player controls a samurai who can run, jump, and use the environment to evade threats and reach the end of each level. The game tracks player 
+progress through levels, including simple physics for movement and collision, and provides visual feedback with minimal HUD and animations. 
+For me this project aims to combine simple game mechanics, level layout, and interaction in order to have a playable and enjoyable platformer 
+experience. A secondary goal is also to get better at pixel art animation, as well as overall large project design and development.
+
+PROGRAM DOCUMENTATION:
+This needs to be built with SFML, and the json library is included inside of the zip. All the source code is included, along with any resources
+if one wishes to modify or expand this game. As for running the game, type make run into the terminal, it will make the game (might take a second or two)
+and then it will also run the file that is created :).
+PLEASE use the makefile I provided, I can't guarantee that other Makefiles will work for this program with all of its other dependencies.
+
+I wanted to add moving platforms, but I realized that would require a lot more work than was needed for a simple addition to future levels.
+
+Game Walkthrough
+- Level One
+    the checkpoints in this level are the grey swirl rock things
+    and for the finish you kind of need to wiggle
+    back and forth on it a bit for the game to recognize it. 
+    I tried to fix this but nothing I did would help.
+
+- Level Two
+    remember that you have a dash on (Q / E)
+    and the fact that the jump that you have does not 
+    expire when you are in mid air.
+
+- Level Three
+    recall that spikes make you lose a life
+    and for the rightmost jump, you have to dash into
+    the corner of the upper block in order to complete
+    the jump and land on top :) GOOD LUCK.
+
+
+CLASS DESCRIPTION: What was your custom class you created? What data and functionality was encapsulated? How did creating the class help the structure of your program?
+I will detail one of the custom classes I made, Animation.
+
+I created a custom Animation class designed to load, manage, and display frame based animations for a game using SFML. The class handles reading image files from a 
+folder, switching animation directions, controlling animation speed, and updating which frame is currently displayed.
+
+The class encapsulates both the data required for animation and the behaviors needed to run it.
+
+Encapsulated Data:
+
+_frames: A vector of sf::Texture objects representing each frame of the animation.
+
+_sprite: A unique pointer to the sf::Sprite which displays the current frame.
+
+_currentFrame: Index of the frame currently shown.
+
+_frameTime: How long each frame should be shown
+
+_elapsedTime: Time since the last frame update.
+
+_currentDirection: A string used to load the correct folder for directional animations ("up", "down", "left", "right").
+
+Creating the Animation class improves the structure of the program in many ways. All animation logic is stored in one 
+place instead of being spread across multiple files. Other parts of the program only need to call simple functions like 
+update() or getSprite() instead of dealing with textures, folders, timing, or frame indexes. The class can also be reused 
+for any animated object (player, enemies, effects). All you need is a folder of images.
+
+
+LIST DATA STRUCTURE: Which list data structure did you choose to use? Why was this structure chosen? How did it apply to the task at hand?
+I used many vectors, for instance:
+    the list of levels
+    the list of level data
+    the leaderboard entries
+    the files of an animation.
+
+I chose this structure, because at the time of the creation of the base of this project, the only list structure that we knew of that was 
+mutable was the vector. I applied it to the task at hand by using the property of a vector 
+
+FILE I/O:
+File IO was implemented in my program in the TileMap class as well as leaderboard.txt. It was necessary because in order to use a good map editor like Tiled, I had to create a system that 
+was able to read the output of that program once I was done with creating each level. I used the JSON library to be able to process the great data storage solution that is JSON files.
+That is essentially what the TileMap class is.
+
+
+PROJECT MODIFICATIONS:
+The main change that I did made was that I kind of made the main game loop multiple different game loops. I did this in order to encapsulate the different menus and ways that the game is played.
+For instance there are inner loops like Winstate, Losestate, leaderboard, etc. Inside of these loops the game from that state is processed. These changes were necessary because it made the game run
+smoother and have less lines of repeating code. Another thing that differed from the initial description was the fact that at the start I wanted to add enemies. In the end I decided that this 
+game is more of a speedrun focused, fast run through game, than a 2d platformer like super mario where you have to defeat enemies to win. This change was not necessary but it took the game a 
+direction that I did not really foresee it going. And the fact that my roommate and I enjoyed trying to get a better score, aka speedruning the game, helped further this idea more.
+
+
+REFLECTIONS: Include at least a one-paragraph description of what you learned from this project. It might help to think about what problems you encountered, and what you would do differently 
+if you had to do another project.
+
+I learned a lot from this project, from the way that I approach big problems, to how animations really work inside of games. I had never taken on such a big project before so the ideas of the SOLID
+principles that we learned in class also helped with that. I had to dive into 2d animation and level design. Both things that you don't necessarily think about when you think software engineering.
+One of the main problems I encountered was how do I make the game enjoyable but also at the same time making it look good and easy to code. The hardest part of that was a well working collision system.
+I implemented AABB collision by looking up resources online and basing my code off of that. The fun part is I don't think that I completely finished that because in the third level, the only way to 
+complete a jump is to clip into the edge of a tile and have the game "bug" a little bit. But that is also the fun part of game design, when you take the badly working parts of your game and turn
+them into a cool level. If I had to do another project, I think I would plan better at the start instead of just winging it the entire time. A strong plan at the start lets you make changes in the 
+future, but if you ever get stuck you can always fall back onto the predetermined path. Overall, this project was very fun and it opened my eyes to the world of game design and 2d platformers.

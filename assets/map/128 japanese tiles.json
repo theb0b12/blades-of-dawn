@@ -1,0 +1,14 @@
+{ "columns":8,
+ "image":"..\/maybe\/128japanese sprite sheet-sheet.png",
+ "imageheight":128,
+ "imagewidth":256,
+ "margin":0,
+ "name":"128 japanese tiles",
+ "spacing":0,
+ "tilecount":32,
+ "tiledversion":"1.11.2",
+ "tileheight":32,
+ "tilewidth":32,
+ "type":"tileset",
+ "version":"1.10"
+}

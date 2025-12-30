@@ -1,0 +1,58 @@
+Blades At Dawn
+
+
+Development Team
+
+Game Design: Logan B.A.
+
+Programming: Logan B.A.
+
+Art & Animation: Logan B.A. et al. see below
+
+
+
+Powered By:
+
+SFML (Simple and Fast Multimedia Library)
+— Copyright (c) Laurent Gomila
+— Licensed under the zlib/libpng License
+
+C++17
+
+Additional Tools 
+
+[Tile/map editor] Tiled
+[Animation software] libresprite
+ 
+Libraries:
+
+nlohmann::json
+
+
+Third-Party Assets
+
+Pixel Art Sprites by Mattez Art on itch.io https://itch.io/profile/xzany (License: "Used under a custom license allowing modification and commercial use within a game project. Redistribution or resale as a standalone asset is prohibited. NFTs are not permitted. Attribution appreciated but not required.")
+
+Some background art sprites were generated with the help of https://www.pixellab.ai/
+
+Menu Background - https://x.com/PixelArtJourney/status/1483565636433367048
+
+Tiles - Cainos on itch.io https://cainos.itch.io/
+
+Font - JAPAN_RAMAN
+
+
+Special Thanks
+
+Mitch & Owen for game testing and ideas
+
+LLMs like ChatGPT and Claude for brainstorming and aid in debugging
+
+The SFML community
+
+Open source developers everywhere
+
+
+Created with love by
+theb0b
+© 2025 All Rights Reserved
