@@ -1,8 +1,4 @@
-/* CSCI 200: Final Project - Blades at Dawn
- *
- * Author: Logan Bordewin-Allen
-
- * For credits see Credits.txt
+/*
  
  * Description:
  *    A 2d platformer, and my first game.
