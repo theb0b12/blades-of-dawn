@@ -3,11 +3,11 @@ Blades At Dawn
 
 Development Team
 
-Game Design: Logan B.A.
+Game Design: █████ ███
 
-Programming: Logan B.A.
+Programming: █████ ███
 
-Art & Animation: Logan B.A. et al. see below
+Art & Animation: █████ ███ et al. see below
 
 
 
@@ -44,7 +44,7 @@ Font - JAPAN_RAMAN
 
 Special Thanks
 
-Mitch & Owen for game testing and ideas
+█████ █ ████ for game testing and ideas
 
 LLMs like ChatGPT and Claude for brainstorming and aid in debugging
 
